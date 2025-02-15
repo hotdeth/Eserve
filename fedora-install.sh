@@ -6,9 +6,9 @@
     
     if [ $? -eq 0 ]
     then
-      echo "The DHCP server is active" > dhcp_state.txt
+      echo "The DHCP server running" > dhcp_state.txt
     else
-      echo "Something went wrong with DHCP server"  > dhcp_state.txt
+      echo "Something went wrong with DHCP server , check your ethernet ip address"  > dhcp_state.txt
     fi
     
     sudo dnf install vsftpd -y
@@ -26,7 +26,7 @@
     sudo systemctl start nginx.service
     if [ $? -eq 0 ]
     then
-      echo "The nginx server active" > nginx_state.txt 
+      echo "The nginx server running" > nginx_state.txt 
     else
-      echo "The nginx server went wrong" > nginx_state.txt
+      echo "Something went wrong with nginx server!" > nginx_state.txt
     fi
