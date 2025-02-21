@@ -30,5 +30,38 @@
   else
     echo "FTP server exit with code $?" > ./ftp_state.txt
   fi
+  sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
+  curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
+| sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+
+  echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
+    | sudo tee /etc/apt/preferences.d/99nginx
+  sudo apt install nginx
+  sudo systemctl enable nginx
+  sudo systemctl start nginx 
+  sudo mkdir /var/www/for_ubuntu
+  sudo cp ./web_for_test.php /var/www/for_ubuntu
+  sudo cp ./site_ave.local /etc/nginx/sites-available
+  sudo ln -s /s /etc/nginx/sites-available/site_ave.local /etc/nginx/sites-enabled 
+  sudo systemctl restart nginx 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
