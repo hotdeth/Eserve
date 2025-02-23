@@ -6,12 +6,12 @@
     <meta name="author" content="Eredin">
     <style>
         body{
-            background-image: url(plugins/home.jpg);
+            background-image: url('/plugins/home.jpg');
             background-size: cover;
             background-attachment: fixed;
         }
     </style>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 </head>
 <body>
         <h2 id="Eserve">Eserve</h2>
@@ -20,7 +20,7 @@
             choose your service and get
             started with your easiest configuration setup.</p>
 
-        <img id="img1" src="plugins/Group1.png">
+        <img id="img1" src="{{ url('/plugins/Group1.png') }}">
 
         <a href="/dhcp" class="rectangle" id="rect1">DHCP</a>
         <a href="ftp.html" class="rectangle" id="rect2">FTP</a>
