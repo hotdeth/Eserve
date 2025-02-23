@@ -1,0 +1,74 @@
+#Eserve{
+    position: absolute;
+      width: 230px;
+      height: 75px;
+      left: 75px;
+      top: 151px;
+      
+      font-family: Sarala;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 75px;
+      
+      
+      color: #1A3453;
+  }
+  #p3{
+    position: absolute;
+          width: 605px;
+          height: 132px;
+          left: 84px;
+          top: 252px;
+          font-size: 36px;
+  }
+  #img1{
+    position: fixed;
+    width: 641.26px;
+    height: 381.13px;
+    left: 723px;
+    top: 180px;
+  }
+  .rectangle {
+    position: absolute;
+    width: 197px;
+    height: 96px;
+    background: #1A3453;
+    border-radius: 16px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+  }
+  
+
+  .rectangle:hover {
+    background-color: #12263d;
+    cursor: pointer;
+  }
+  
+  #rect1 {
+    left: 130px;
+    top: 676px;
+  }
+  
+  #rect2 {
+    left: 459px;
+    top: 676px;
+  }
+  
+  #rect3 {
+    left: 1117px;
+    top: 676px;
+  }
+  
+  #rect4 {
+    left: 788px;
+    top: 676px;
+  }
