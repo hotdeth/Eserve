@@ -23,11 +23,12 @@
         <img id="img1" src="{{ url('/plugins/Group1.png') }}">
 
         <a href="/dhcp" class="rectangle" id="rect1">DHCP</a>
-        <a href="ftp.html" class="rectangle" id="rect2">FTP</a>
-        <a href="dns.html" class="rectangle" id="rect3">DNS</a>
-        <a href="http.html" class="rectangle" id="rect4">HTTP</a>
+        <a href="/ftp" class="rectangle" id="rect2">FTP</a>
+        <a href="/dns" class="rectangle" id="rect3">DNS</a>
+        <a href="/http" class="rectangle" id="rect4">HTTP</a>
 
 
+        
 
 </body>
 

@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/dhcp', function () {
     return view('dhcp');
 });
+
+Route::get('/ftp', function () {
+    return view('ftp');
+});
