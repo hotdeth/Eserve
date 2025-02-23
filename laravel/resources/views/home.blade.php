@@ -13,6 +13,19 @@
     </style>
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 </head>
+
+<?php 
+$myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
+$dhcp_state = fread($myfile,filesize("dhcp_state.txt"));
+if ($dhcp_state == "Running"){
+    $dhcp_state = "🟢 $dhcp_state";
+}
+else {
+    $dhcp_state = "🔴 $dhcp_state";
+}
+fclose($myfile);
+ ?>
+
 <body>
         <h2 id="Eserve">Eserve</h2>
 
@@ -21,19 +34,23 @@
             started with your easiest configuration setup.</p>
 
         <img id="img1" src="{{ url('/plugins/Group1.png') }}">
+    
 
-        <a href="/dhcp" class="rectangle" id="rect1">DHCP</a>
+        <a href="/dhcp" class="rectangle" id="rect1">
+        <div class="protocol-name">DHCP</div>
+        
+        <div class="active-status"><br>{{ $dhcp_state }}</div>
         <a href="/ftp" class="rectangle" id="rect2">FTP</a>
         <a href="/dns" class="rectangle" id="rect3">DNS</a>
         <a href="/http" class="rectangle" id="rect4">HTTP</a>
-
+        
 
         
 
 </body>
 
 
-
+  <!-- <a href="/dhcp" class="rectangle" id="rect1">DHCP</a> -->
 
 
 
