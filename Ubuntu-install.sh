@@ -1,5 +1,5 @@
 #!/bin/bash
-
+  # Dhcp install
   sudo apt update && upgrade -y
   sudo apt install isc-dhcp-server
   sudo systemctl enable isc-dhcp-server
@@ -11,7 +11,8 @@
     echo "The DHCP server is running" > ./dhcp_state.txt
   else
     echo "Something went wrong with DHCP server , check your ethernet ip address"  > dhcp_state.txt
-  fi 
+  fi
+  # Ftp install
   sudo apt install vsftpd
   sudo systemctl start vsftpd
   sudo systemctl enable vsftpd
@@ -30,6 +31,7 @@
   else
     echo "FTP server exit with code $?" > ./ftp_state.txt
   fi
+  #nginx install
   sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
   curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
 | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
