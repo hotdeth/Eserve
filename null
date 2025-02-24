@@ -1,0 +1,19 @@
+× isc-dhcp-server.service - ISC DHCP IPv4 server
+     Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-02-24 13:29:31 +03; 7ms ago
+   Duration: 8ms
+       Docs: man:dhcpd(8)
+    Process: 13949 ExecStart=/bin/sh -ec      CONFIG_FILE=/etc/dhcp/dhcpd.conf;      if [ -f /etc/ltsp/dhcpd.conf ]; then CONFIG_FILE=/etc/ltsp/dhcpd.conf; fi;      [ -e /var/lib/dhcp/dhcpd.leases ] || touch /var/lib/dhcp/dhcpd.leases;      chown root:dhcpd /var/lib/dhcp /var/lib/dhcp/dhcpd.leases;      chmod 775 /var/lib/dhcp ; chmod 664 /var/lib/dhcp/dhcpd.leases;      exec dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf $CONFIG_FILE $INTERFACESv4 (code=exited, status=1/FAILURE)
+   Main PID: 13949 (code=exited, status=1/FAILURE)
+        CPU: 6ms
+
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: 
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: If you think you have received this message due to a bug rather
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: than a configuration issue please read the section on submitting
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: bugs on either our web page at www.isc.org or in the README file
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: before submitting a bug.  These pages explain the proper
+Feb 24 13:29:31 mohammed-lap systemd[1]: isc-dhcp-server.service: Main process exited, code=exited, status=1/FAILURE
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: process and the information we find helpful for debugging.
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: 
+Feb 24 13:29:31 mohammed-lap dhcpd[13949]: exiting.
+Feb 24 13:29:31 mohammed-lap systemd[1]: isc-dhcp-server.service: Failed with result 'exit-code'.
