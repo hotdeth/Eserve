@@ -1,4 +1,5 @@
 #Eserve{
+    
     position: absolute;
       width: 230px;
       height: 75px;
@@ -15,6 +16,7 @@
       color: #1A3453;
   }
   #p3{
+    font-family:sans-serif ;
     position: absolute;
           width: 605px;
           height: 132px;
@@ -36,6 +38,7 @@
     background: #1A3453;
     border-radius: 16px;
    
+    /* Text styling */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +57,7 @@
   }
   
   #rect1 {
+    
     left: 130px;
     top: 676px;
   }

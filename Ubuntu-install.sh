@@ -50,6 +50,7 @@
 
 
 
+#field to start nginx for ubuntu > reseaon the s directory or file should be deleted from /etc/nginx/site-aviable
 
 
 
