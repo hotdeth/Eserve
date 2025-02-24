@@ -5,8 +5,7 @@
     <meta name="Discription" content="A service website serve servers">
     <meta name="author" content="Eredin">
     <style>
-        
-        body{
+    body{
             background-image: url('/plugins/home.jpg');
             background-size: cover;
             background-attachment: fixed;
@@ -14,7 +13,8 @@
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<!---What is this Ridha---->
 
 <?php 
 $myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
@@ -27,11 +27,11 @@ else {
 }
 fclose($myfile);
  ?>
-
+<!----------------->
 <body>
         <h2 id="Eserve">Eserve</h2>
 
-        <p id="p3">your best open source destination,
+        <p id="p1">your best open source destination,
             choose your service and get
             started with your easiest configuration setup.</p>
 
@@ -42,26 +42,14 @@ fclose($myfile);
 
         <img id="img1" src="{{ url('/plugins/1.png') }}">
     
-
-        <a href="/dhcp" class="rectangle" id="rect1">
-        <div class="protocol-name">DHCP</div>
-        
-        <div class="active-status"><br>{{ $dhcp_state }}</div>
-        <a href="/ftp" class="rectangle" id="rect2">FTP</a>
-        <a href="/dns" class="rectangle" id="rect3">DNS</a>
-        <a href="/http" class="rectangle" id="rect4">HTTP</a>
+    
+            <a href="/dhcp" class="rectangle" id="rect1">DHCP</a>
+            <a href="/ftp" class="rectangle" id="rect2">FTP</a>
+            <a href="/dns" class="rectangle" id="rect3">DNS</a>
+            <a href="/http" class="rectangle" id="rect4">HTTP</a>
         
 
         
 
 </body>
-
-
-
-  <!-- <a href="/dhcp" class="rectangle" id="rect1">DHCP</a> -->
-
-
-
-
-
 </html>
