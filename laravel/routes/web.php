@@ -13,3 +13,9 @@ Route::get('/dhcp', function () {
 Route::get('/ftp', function () {
     return view('ftp');
 });
+Route::get('/http', function () {
+    return view('http');
+});
+Route::get('/dns', function () {
+    return view('dns');
+});
