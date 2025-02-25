@@ -95,5 +95,5 @@ Contributions to this project are welcome. To contribute:
 4. Open a pull request with a detailed description of your changes.
 
 ## License
-Eserve is an **open-source project** licensed under the [MIT License](LICENSE).
+Eserve is an **open-source project** licensed under the [GPL3 LICENSE](LICENSE).
 
