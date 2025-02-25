@@ -1,4 +1,18 @@
+
+
+<p align="center">
+  <img src="fatima/logorr.png#gh-dark-mode-only" alt="Eserve">
+   <img src="fatima/logorr.png#gh-light-mode-only" alt="Eserve">
+</p>
+
 # Eserve Project – Simplifying Network Server Management
+-----------
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [License](#license)
+----------------
 
 ## Introduction
 Initially, our networking course project focused on building a **small data center** that included servers for services such as:
@@ -60,7 +74,7 @@ To install and run Eserve, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/hotdeth/Eserve.git
-   cd eserve
+   cd Eserve
    ```
 2. Run the installation script:
    ```bash
@@ -81,5 +95,5 @@ Contributions to this project are welcome. To contribute:
 4. Open a pull request with a detailed description of your changes.
 
 ## License
-Eserve is an **open-source project** licensed under the [MIT License](LICENSE).
+Eserve is an **open-source project** licensed under the [GPL3 LICENSE](LICENSE).
 
