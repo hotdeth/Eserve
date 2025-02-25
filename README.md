@@ -74,7 +74,7 @@ To install and run Eserve, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/hotdeth/Eserve.git
-   cd eserve
+   cd Eserve
    ```
 2. Run the installation script:
    ```bash
