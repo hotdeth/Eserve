@@ -42,7 +42,7 @@ The project is built using the following technologies:
 - **Bash Scripting** (for automating the installation and startup process).
 
 ## Project Contributors
-The project was developed by a dedicated team of programmers:
+The project was developed by a dedicated team of programmers and designers:
 - **Ridha Read**
 - **Ali Haider**
 - **Rawan Wajdi**
