@@ -1,7 +1,3 @@
-# Eserve
-this repository for the Network project DATACENTER
-
-
 # Eserve Project – Simplifying Network Server Management
 
 ## Introduction
