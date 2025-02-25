@@ -14,9 +14,6 @@
 </body>
 
 
-<<<<<<< HEAD
-
-=======
 <?php 
 $myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
 $dhcp_state = fread($myfile,filesize("dhcp_state.txt"));
@@ -32,6 +29,5 @@ fclose($myfile);
 <h1 style="color:black;">
 {{$dhcp_state}}
 </h1>
->>>>>>> 09f79d7a5c1a60916f1aa6c92d02f4fda93cbc23
 
 </html>
