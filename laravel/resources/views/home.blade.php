@@ -4,6 +4,7 @@
     <title>Eserve</title>
     <meta name="Discription" content="A service website serve servers">
     <meta name="author" content="Eredin">
+    <link rel="icon" href="plugins/logo1616.png">
     <style>
     body{
             background-image: url('/plugins/home.jpg');
