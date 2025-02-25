@@ -1,7 +1,18 @@
-  ![Eserve.png](/fatima/logorr.png "Eserve.png")
 
+
+<p align="center">
+  <img src="fatima/logorr.png#gh-dark-mode-only" alt="Eserve">
+   <img src="fatima/logorr.png#gh-light-mode-only" alt="Eserve">
+</p>
 
 # Eserve Project – Simplifying Network Server Management
+-----------
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [License](#license)
+----------------
 
 ## Introduction
 Initially, our networking course project focused on building a **small data center** that included servers for services such as:
