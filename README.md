@@ -66,6 +66,7 @@ The project was developed by a dedicated team of programmers and designers:
 - **Ashtar Faris**
 - **Hussein Jabbar**
 - **Taher Ahmed**
+- **Mohammed Baqer**
 - **Mohammed Basem**
 
 ## Installation
