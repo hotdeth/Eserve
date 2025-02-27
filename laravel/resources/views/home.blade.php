@@ -7,13 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="plugins/logo1616.png">
     <style>
-    body{
-            background-image: url('/plugins/home.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            
-
-        }
+    
     </style>
     <link rel="stylesheet" href="css/home.css">
 </head>
