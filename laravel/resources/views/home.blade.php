@@ -19,6 +19,7 @@
 </head>
 
 <!---What is this Ridha---->
+        <!--this is for the state-->
 
 <?php 
 $myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
