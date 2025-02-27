@@ -1,0 +1,644 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    height: 100vh;
+}
+.back-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #1a3453;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.back-button:hover {
+    background-color: #12243a;
+}
+
+
+/*site-name*/
+.site-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a3453;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/*server-name*/
+.server-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a3453;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+form {
+    width: 80%;
+    height: 90%;
+    max-width: 800px;
+    background: snow;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*domin-name*/
+.domin-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    
+}
+
+.domin-name input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.domin-name input:focus,
+.domin-name input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.domin-name label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    
+}
+
+.domin-name label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.domin-name input:focus + label span,
+.domin-name input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+
+
+
+/*network*/
+.network {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    padding-right: 10px;
+}
+
+.network input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #1a3453;
+}
+
+.network input:focus,
+.network input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.network label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    
+}
+
+.network label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.network input:focus + label span,
+.network input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+/*Subnet*/
+.subnet {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    padding-left: 10px;
+}
+
+.subnet input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #1a3453;
+}
+
+
+
+.subnet input:focus,
+.subnet input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.subnet label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+}
+
+.subnet label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.subnet input:focus + label span,
+.subnet input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+
+
+.network-subnet {
+    display: flex;
+    width: 60%;
+}
+
+
+
+
+
+
+/*Srange*/
+.srange {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    padding-right: 10px;
+    
+}
+
+.srange input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.srange input:focus,
+.srange input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.srange label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    
+}
+
+.srange label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.srange input:focus + label span,
+.srange input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+/*Erange*/
+.erange {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0px;
+    padding-left: 10px;
+    
+}
+
+.erange input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.erange input:focus,
+.erange input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.erange label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    
+}
+
+.erange label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.erange input:focus + label span,
+.erange input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+.s-e-range {
+    display: flex;
+    width: 60%;
+}
+
+
+.def-router-op-subnetmask {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+
+/* Default Router */
+.def-router {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    padding-right: 10px;
+}
+
+.def-router input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.def-router input:focus,
+.def-router input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.def-router label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    
+}
+
+.def-router label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.def-router input:focus + label span,
+.def-router input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+
+
+
+
+
+/*Options subnet mask*/
+.op-subnetmask {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0px;
+    padding-right: 20px;
+}
+
+.op-subnetmask input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.op-subnetmask input:focus,
+.op-subnetmask input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.op-subnetmask label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    
+}
+
+.op-subnetmask label span {
+    display: flex;
+    font-size: 15px;
+    min-width: 3px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.op-subnetmask input:focus + label span,
+.op-subnetmask input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+/*DNS*/
+
+.DNS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+}
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.inp1{
+    padding-right: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+.inp2 {
+    padding-left: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.DNS input {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 15px;
+    color: #1a3453;
+}
+
+.DNS input:focus,
+.DNS input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.DNS label {
+    display: flex;
+    align-items: center;
+    top: 5px;
+}
+
+.DNS label span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.DNS input:focus + label span,
+.DNS input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+
+/* Lease Time */
+.leasetime {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding-top: 20px;
+}
+
+.leasetime input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #13050588 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #1a3453;
+    margin-left: 46%;
+}
+
+.leasetime input:focus,
+.leasetime input:valid {
+    outline: 0;
+    border-bottom-color: #12243a;
+}
+
+.leasetime label {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    pointer-events: none;
+    margin-left: 46%;
+}
+
+.leasetime label span {
+    display: inline-block;
+    font-size: 15px;
+    min-width: 5px;
+    color: #1a3453;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.leasetime input:focus + label span,
+.leasetime input:valid + label span {
+    color: #12243a;
+    transform: translateY(-30px);
+}
+
+
+.save-button {
+    background-color: #1a3453;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.save-button:hover {
+    background-color: #122338;
+}
+
+.save-button:active {
+    background-color: #033674;
+}
+
+label{
+    pointer-events: none;
+}
+input {
+    border-radius: 5px;
+}
+
+.lease-button {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
