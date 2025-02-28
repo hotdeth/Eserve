@@ -1,15 +1,6 @@
-body{
-  
-  background-image: url('/plugins/home.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  
-
-}
-
 #Eserve{
     
-    position: relative;
+    position: fixed;
       width: 230px;
       height: 75px;
       left: 75px;
@@ -92,5 +83,3 @@ body{
     left: 788px;
     top: 620px;
   }
-  
-  

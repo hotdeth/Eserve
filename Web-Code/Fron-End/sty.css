@@ -1,0 +1,172 @@
+body{
+  
+  background-image: url('home.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  
+
+}
+
+#Eserve{
+    
+    
+
+
+
+        position: absolute;
+        width: 167.79px;
+        height: 49.51px;
+        left: 136.49px;
+        top: 175.65px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 45.8456px;
+        line-height: 54px;
+
+        color: #1A3453;
+
+
+  }
+
+  #p1{
+    /* your best open source destination, choose your service and get started with your easiest configuration setup. */
+
+          position: absolute;
+          width: 514.49px;
+          height: 113.69px;
+          left: 136.49px;
+          top: 259.08px;
+
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 29.3412px;
+          line-height: 34px;
+
+          color: #1A3453;
+
+
+  }
+  #img1{
+    position: absolute;
+    width: 641.26px;
+    height: 381.13px;
+    left: 780px;
+    top: 134.37px;
+
+  }
+  .rectangle {
+    position: absolute;
+    width: 190px;
+    height: 90px;
+    background: #1A3453;
+    border-radius: 13.6917px;
+
+    /* Grow or Zoom effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Text styling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DCEBFE;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-decoration: none; 
+    transition: background-color 0.5s; 
+  }
+  
+
+  .rectangle:hover {
+    background-color: #12263d;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #rect1 {
+    
+    left: 195px;
+    top: 600px;
+  }
+  
+  #rect2 {
+    left: 480.12px;
+    top: 600px;
+  }
+  
+  #rect3 {
+    left: 1043.19px;
+    top: 600px;
+    
+  }
+  
+  #rect4 {
+    left: 761.65px;
+    top: 600px;
+  }
+
+@media (max-width: 1440px){
+  #Eserve{
+    width: 100%;
+  }
+  #p1{
+    width: 100%;
+  }
+  #img1 {
+    width: 100%;
+  }
+  .rectangle{
+    width: 100%;
+  }
+
+}
+@media (min-width: 1471px) {
+  #Eserve{
+    width: 169.79px;
+    left: 166.49px;
+    top: 205.65px;
+    font-size: 58px;
+  }
+  #p1{
+    width: 544.49px;
+    left: 166.49px;
+    top: 290px;
+    font-size: 38px;
+  }
+  #img1 {
+    width: 671.26px;
+    left: 1090px;
+    top: 164.37px;
+  }
+  .rectangle{
+    position: absolute;
+    width: 200px;
+  }
+  #rect1 {
+    
+    left: 250px;
+    top: 740px;
+  }
+  
+  #rect2 {
+    left: 650px;
+    top: 740px;
+  }
+  
+  #rect3 {
+    left: 1450.19px;
+    top: 740px;
+    
+  }
+  
+  #rect4 {
+    left: 1050px;
+    top: 740px;
+  }
+
+}
