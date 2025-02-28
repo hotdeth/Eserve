@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/dhcp.css">
   <style>
     body{
-            background-image: url("/plugins/HTTP.png");
+            background-image: url('plugins/home.jpg');
             background-size: cover;
             background-attachment: fixed;
         }
@@ -16,14 +16,15 @@
 </head>
 <body>
 
-  <button class="back-button">O</button>
+<a href="/">
+  <button type="submit" class="back-button">
+    <span class="arrow"></span>
+  </button></a>
+
+
   <form action="">
 
-    <h1 class="site-name">
-      <span style="transition-delay: 0ms;">Eserve</span>
-    </h1>
-
-    <h2 class="server-name">DHCP Server</h2>
+    <h2 class="server-name">DHCP Configuration</h2>
     
     <div class="domin-name">
       <input type="text" required=" ">
@@ -198,8 +199,8 @@
             <span style="transition-delay: 500ms;">:</span>
         </label>
     </div>
-    <div>
-      <button type="submit" class="save-button">Save</button>
+    <div class="save-button">
+      <button type="submit">Save</button>
     </div>
     </div>
 
