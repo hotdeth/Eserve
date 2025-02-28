@@ -1,0 +1,96 @@
+body{
+  
+  background-image: url('/plugins/home.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  
+
+}
+
+#Eserve{
+    
+    position: relative;
+      width: 230px;
+      height: 75px;
+      left: 75px;
+      top: 120px;
+      
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 75px;
+      
+      
+      color: #1A3453;
+  }
+
+  #p1{
+    font-family: Arial, Helvetica, sans-serif ;
+    position: fixed;
+          width: 605px;
+          height: 132px;
+          left: 75px;
+          top: 240px;
+          font-size: 36px;
+  }
+  #img1{
+    position: fixed;
+    width: 641.26px;
+    height: 381.13px;
+    left: 780px;
+    top: 100px;
+  }
+  .rectangle {
+    position: fixed;
+    width: 197px;
+    height: 96px;
+    background: #1A3453;
+    border-radius: 16px;
+
+    /* Grow or Zoom effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Text styling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DCEBFE;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-decoration: none; 
+    transition: background-color 0.5s; 
+  }
+  
+
+  .rectangle:hover {
+    background-color: #12263d;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  #rect1 {
+    
+    left: 130px;
+    top: 620px;
+  }
+  
+  #rect2 {
+    left: 459px;
+    top: 620px;
+  }
+  
+  #rect3 {
+    left: 1117px;
+    top: 620px;
+  }
+  
+  #rect4 {
+    left: 788px;
+    top: 620px;
+  }
+  
+  
