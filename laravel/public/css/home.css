@@ -1,3 +1,8 @@
+body{
+  background-image: url('/plugins/home.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
 #Eserve{
     
     position: fixed;
