@@ -1,6 +1,6 @@
 #!/bin/bash
   # Dhcp install
-  sudo apt update -y
+  sudo apt update -y 1>./null 2./null
   sudo apt install isc-dhcp-server
   sudo systemctl enable isc-dhcp-server
   sudo cp dhcpd.conf /etc/dhcp/dhcpd.conf
@@ -45,7 +45,6 @@
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
   sudo cp index.html  /var/www/for_ubuntu
-  sudo chown -R nginx:nginx /var/www/for_ubuntu
   sudo cp ./site_ave.local /etc/nginx/sites-available
   sudo ln -s  /etc/nginx/sites-available/site_ave.local /etc/nginx/sites-enabled 
 #  sudo rm -rf /etc/nginx/sites-available/s 1>>../status/null 2>>../status/null
