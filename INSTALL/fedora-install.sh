@@ -1,7 +1,7 @@
     sudo dnf update -y  2>>error_log
     sudo dnf install dhcp-server
     sudo systemctl enable dhcpd.service
-    sudo cp ./dhcpd.conf /etc/dhcp/dhcpd.conf
+    sudo cp ../config/dhcpd.conf /etc/dhcp/dhcpd.conf
     sudo systemctl start -q dhcpd.service
     
     if [ $? -eq 0 ]
