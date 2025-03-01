@@ -1,1 +1,0 @@
-#first error with dhcp server in ubuntu is that the config should replace with fedora dhcp.conf
