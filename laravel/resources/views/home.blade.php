@@ -17,6 +17,7 @@
 </head>
 
 <!---What is this Ridha---->
+<!--- for the test state on home page ---->
 
 <?php 
 $myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/dhcp.css">
   <style>
     body{
-            background-image: url('plugins/home.jpg');
+            background-image: url('home.png');
             background-size: cover;
             background-attachment: fixed;
         }
@@ -16,15 +16,13 @@
 </head>
 <body>
 
-<a href="/">
-  <button type="submit" class="back-button">
+  <button class="back-button">
     <span class="arrow"></span>
-  </button></a>
-
-
+  </button>
   <form action="">
 
-    <h2 class="server-name">DHCP Configuration</h2>
+
+    <h2 class="server-name">DHCP Configuration System</h2>
     
     <div class="domin-name">
       <input type="text" required=" ">
