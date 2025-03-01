@@ -62,11 +62,12 @@ body {
   
   /* Left-aligns the title inside the settings box */
   .settings-box h2 {
-    font-size: 32px;
-    margin-bottom: 35px;
+    font-size: 24px;
+    margin-bottom: 55px;
     font-weight: bold;
     color: #1A3453;
     padding: 30px 20px;
+    animation: slideInLeft 1.5s ease-in-out;
   }
   
   /* Layout for the form rows */
@@ -87,7 +88,7 @@ body {
   
   /* Styles the labels inside the form groups */
   .form-group label {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #1A3453;
     background: #EEF5FF;
@@ -103,7 +104,7 @@ body {
     border: 1px solid #ccc;
     border-top: none; /* Removes the top border */
     border-radius: 0 0 16px 16px; /* Only rounds the bottom corners */
-    font-size: 20px;
+    font-size: 18px;
     background: #EEF5FF;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 9px 6px rgba(0, 0, 0, 0.1);
