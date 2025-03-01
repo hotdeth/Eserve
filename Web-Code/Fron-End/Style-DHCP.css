@@ -1,0 +1,375 @@
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;                                            
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a3453;
+    min-height: 100vh;
+}
+.name-server-saved-button {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5% 5% 5% 5%;
+    padding: 3px 3%;
+    margin: 10px 0px;
+    width: 100%;
+    max-width: 820px;
+    background: snow;
+    
+}
+.name-server-saved-button h2 {
+    font-size: 24px;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+
+.name-server-saved-button button{
+    background-color: #347ed8;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: white;
+    border: 0;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.name-server-saved-button button:hover {
+    transform: scale(1.1);
+    background-color: #2e6fbe;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.name-server-saved-button button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1a3453;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    outline: none;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    background-color: #12243a;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:active{
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    transform: rotate(-45deg);
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/*name-head*/
+.header-form {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a3453;
+    letter-spacing: 2px;
+    padding: 3% 5%;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+form {
+    height: 70vh;
+    width: 80%;
+    max-width: 900px;
+    background: snow;
+    border-radius: 3%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*domin-name*/
+.domin-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-top: 80px;
+}
+.domin-name input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.domin-name label {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*network*/
+.network {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding-right: 10px;
+}
+.network input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.network label {
+    
+    font-size: 18px;
+}
+
+/*Subnet*/
+.subnet {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.subnet input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.subnet label {
+    font-size: 18px;
+}
+
+
+
+.network-subnet {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+
+/*Srange*/
+.srange {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.srange input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.srange label {
+    font-size: 18px;
+}
+/*Erange*/
+.erange {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.erange input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.erange label {
+    font-size: 18px;
+}
+
+/*div of range start and end*/
+.s-e-range {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+
+
+/* Default Router */
+.def-router {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-top: 10px;
+    padding-right: 10px;
+    
+}
+.def-router input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.def-router label {
+    font-size: 18px;
+}
+
+
+/*Options subnet mask*/
+.op-subnetmask {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.op-subnetmask input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.op-subnetmask label {  
+    font-size: 18px;
+}
+
+
+.def-router-op-subnetmask {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+/*DNS*/
+
+.DNS {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+
+.inp1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    
+}
+.inp1 input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.inp2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    
+}
+.inp2 input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.label-DNS {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 18px;
+
+}
+
+
+
+/* Lease Time */
+.leasetime {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.leasetime input {
+    display: block;
+    border: 0;
+    border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
+}
+
+.leasetime label {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+input {
+    border-radius: 20px;
+}
