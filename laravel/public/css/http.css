@@ -17,27 +17,38 @@ body {
   
   /* Styles for a back button */
   .back-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #1A3453;
-    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     border: none;
-    border-radius: 50%; /* Makes the button circular */
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
+    background-color: #1a3453;
     cursor: pointer;
     display: flex;
-    justify-content: center; /* Centers button content horizontally */
-    align-items: center; /* Centers button content vertically */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to the button */
-    transition: 0.3s; /* Makes hover transitions smooth */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    outline: none;
   }
   
   .back-btn:hover {
-    background: #1A3453; /* Changes background color on hover */
+    transform: scale(1.1);
+    background-color: #12243a;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Changes background color on hover */
   }
+  .arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    transform: rotate(-45deg);
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
   
   /* Styles for the main settings box */
   .settings-box {
@@ -148,4 +159,4 @@ body {
   .save-btn:hover {
     background: #6EAEFA; /* Changes background color on hover */
   }
-  
+

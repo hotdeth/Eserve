@@ -8,7 +8,12 @@
 
 </head>
 <body>
-    <button class="back-btn"><</button>
+    <a href="/">
+        <button class="back-btn">
+        <span class="arrow"></span>
+        </button>
+    </a>
+    
     <div class="settings-box">
         <h2>HTTP Configuration Settings</h2>
         
@@ -35,8 +40,11 @@
         </div>
 
         <div class="buttons">
-            <label for="file-upload" class="upload-btn">Upload File 📤</label>
+            <label for="file-upload" class="upload-btn">
+            Upload File 
+            <img src="/plugins/image1.png" ></label>
             <input type="file" id="file-upload" hidden>
+            
             <button class="save-btn">Save Changes</button>
         </div>
     </div>
