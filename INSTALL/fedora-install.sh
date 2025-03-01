@@ -18,15 +18,21 @@
     sudo passwd ftpuser
     sudo chown ftpuser:ftpuser /home/ftpuser
     sudo chmod 700 /home/ftpuser
-    sudo systemctl restart  vsftpd
+    sudo systemctl restart -q  vsftpd
+    if [ $? -eq 0 ]
+    then
+      echo "FTP running" > ../status/ftp_state.txt
+    else
+      echo "FTP error" > ../status/ftp_state.txt
+    fi
     sudo dnf install nginx 
     sudo systemctl enable nginx.service
     sudo cp ./nginx_test.conf /etc/nginx/conf.d/ 
     sudo cp ./php-fpm.conf /etc/nginx/conf.d/ 
-    sudo systemctl start nginx.service
+    sudo systemctl start -q nginx.service
     if [ $? -eq 0 ]
     then
-      echo "The nginx server running" > nginx_state.txt 
+      echo "nginx running" > ../status/nginx_state.txt 
     else
-      echo "Something went wrong with nginx server!" > nginx_state.txt
+      echo "nginx error!" > ../status/nginx_state.txt
     fi
