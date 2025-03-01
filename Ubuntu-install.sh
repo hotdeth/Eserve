@@ -14,7 +14,7 @@
   fi
 
   # Ftp install
-  sudo apt install vsftpd
+  sudo apt install vsftpd -y
   sudo systemctl start vsftpd
   sudo systemctl enable vsftpd
   sudo cp /etc/vsftpd.conf /etc/vsftpd.conf_default 
@@ -40,7 +40,7 @@
 
   echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
     | sudo tee /etc/apt/preferences.d/99nginx
-  sudo apt install nginx
+  sudo apt install nginx -y
   sudo systemctl enable -q nginx
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
