@@ -91,40 +91,72 @@ body{
   #rect1 {
     
     left: 195px;
-    top: 600px;
+    top: 620px;
   }
   
   #rect2 {
     left: 480.12px;
-    top: 600px;
+    top: 620px;
   }
   
   #rect3 {
     left: 1043.19px;
-    top: 600px;
+    top: 620px;
     
   }
   
   #rect4 {
     left: 761.65px;
-    top: 600px;
+    top: 620px;
   }
 
-@media (max-width: 1440px){
+@media (max-width: 1360px){
   #Eserve{
-    width: 100%;
+    width: 120px;
+    left: 120px;
+    top: 140px;
+    font-size: 46px;
   }
   #p1{
-    width: 100%;
+    width: 490px;
+    left: 120px;
+    top: 220px;
+    font-size: 28px;
   }
   #img1 {
-    width: 100%;
+    width: 500px;
+    height: 300px;
+    left: 700px;
+    top: 110px;
   }
   .rectangle{
-    width: 100%;
+    position: absolute;
+    width: 160px;
+  }
+  #rect1 {
+    
+    left: 120px;
+    top: 560px;
+  }
+  
+  #rect2 {
+    left: 410px;
+    top: 560px;
+  }
+  
+  #rect3 {
+    left: 1000px;
+    top: 560px;
+    
+  }
+  
+  #rect4 {
+    left: 700px;
+    top: 560px;
   }
 
 }
+
 @media (min-width: 1471px) {
   #Eserve{
     width: 169.79px;
