@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eserve - Open Source Service Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ff88, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s ease infinite;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00ff88, #00b4d8);
+            color: #1a1a1a;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .github-stats {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="title">Eserve</h1>
+            <p class="tagline">An Open Source Solution for Modern Service Management</p>
+            
+            <div class="cta-buttons">
+                <a href="#docs" class="btn btn-primary">
+                    <i class="fas fa-book"></i> Documentation
+                </a>
+                <a href="https://github.com/hotdeth/eserve" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3>Lightning Fast</h3>
+                <p>Built with modern technologies for maximum performance and efficiency.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Secure & Reliable</h3>
+                <p>Enterprise-grade security with regular updates and community-driven audits.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-puzzle-piece feature-icon"></i>
+                <h3>Modular Architecture</h3>
+                <p>Customizable modules to fit your specific service management needs.</p>
+            </div>
+        </section>
+
+        <section class="github-stats">
+            <h2>Join Our Open Source Community</h2>
+            <div class="stats">
+                <img src="https://img.shields.io/github/stars/yourusername/eserve?style=for-the-badge&logo=github&color=00ff88" alt="GitHub Stars">
+                <img src="https://img.shields.io/github/forks/yourusername/eserve?style=for-the-badge&logo=github&color=00b4d8" alt="GitHub Forks">
+                <img src="https://img.shields.io/github/contributors/yourusername/eserve?style=for-the-badge&logo=github" alt="Contributors">
+            </div>
+        </section>
+
+        <footer>
+            <p>🚀 Proudly Open Source | Eserve © 2025</p>
+            <p>Made with ❤️ by Eserve Team</p>
+        </footer>
+    </div>
+</body>
+</html>

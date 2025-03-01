@@ -44,7 +44,7 @@
   sudo systemctl enable -q nginx
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
-  sudo cp web_for_test.php  /var/www/for_ubuntu
+  sudo cp index.html  /var/www/for_ubuntu
   sudo chown -R nginx:nginx /var/www/for_ubuntu
   sudo cp ./site_ave.local /etc/nginx/sites-available
   sudo ln -s  /etc/nginx/sites-available/site_ave.local /etc/nginx/sites-enabled 

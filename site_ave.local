@@ -1,6 +1,6 @@
 server {
 listen 80;
 root /var/www/for_ubuntu;
-index web_for_test.php;
+index index.html;
 server_name localhost;
 }
