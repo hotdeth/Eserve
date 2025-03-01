@@ -21,9 +21,11 @@
     <button type="submit">Save Changes</button>
   </div>
 
+  <a href="/">
   <button class="back-button">
     <span class="arrow"></span>
   </button>
+</a>
   <form action="">
     
     <div class="header-form">
@@ -115,6 +117,6 @@
 
 
 
-  <script src="DHCP.js"></script>
+  <script src="js/DHCP.js"></script>
 </body>
 </html>
