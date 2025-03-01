@@ -5,14 +5,14 @@
   sudo apt install isc-dhcp-server
   sudo systemctl enable isc-dhcp-server
   sudo cp dhcpd.conf /etc/dhcp/dhcpd.conf
-  sudo systemctl start isc-dhcp-server
+  sudo systemctl start -q isc-dhcp-server
   sudo systemctl status isc-dhcp-server 1>./null 2>./null
 
-  if [ $? -eq 0]
+  if [ $? -eq 0 ]
   then
-    echo "DHCP running" > ~/.Eserve_status/dhcp_state.txt
+    echo "DHCP running" > ./dhcp_state.txt
   else
-    echo "DHCP error"  > ~/.Eserve_status/dhcp_state.txt
+    echo "DHCP error"  > ./dhcp_state.txt
   fi
   # Ftp install
   sudo apt install vsftpd
@@ -41,19 +41,20 @@
   echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
     | sudo tee /etc/apt/preferences.d/99nginx
   sudo apt install nginx
-  sudo systemctl enable nginx
-  sudo systemctl start nginx 
+  sudo systemctl enable -q nginx
+  sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
   sudo cp web_for_test.php  /var/www/for_ubuntu
-  sudo cp site_ave.local /etc/nginx/sites-available
-  sudo ln -s /s /etc/nginx/sites-available/site_ave.local /etc/nginx/sites-enabled 
-  sudo rm -rf /etc/nginx/sites-available/s 1>>../status/null 2>>../status/null
+  sudo chown -R nginx:nginx /var/www/for_ubuntu
+  sudo cp ./site_ave.local /etc/nginx/sites-available
+  sudo ln -s  /etc/nginx/sites-available/site_ave.local /etc/nginx/sites-enabled 
+#  sudo rm -rf /etc/nginx/sites-available/s 1>>../status/null 2>>../status/null
   sudo systemctl restart -q nginx 
   if [ $? -eq 0 ]
   then
-    echo "nginx running" > ~/.Eserve_status/nginx_state.txt
+    echo "nginx running" > ./nginx_state.txt
   else
-    echo "nginx error!" > ~/Eserve_status/nginx_state.txt
+    echo "nginx error!" > ./nginx_state.txt
   fi
 
 
