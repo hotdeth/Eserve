@@ -8,10 +8,10 @@ fi
 
 if grep -q "fedora" $release_file
 then
- ./INSTALL/fedora-install.sh 
+ ./fedora-install.sh 
     fi
 
 if grep -q "Ubuntu" $release_file
 then
-   ./INSTALL/Ubuntu-install.sh 
+   ./Ubuntu-install.sh 
 fi

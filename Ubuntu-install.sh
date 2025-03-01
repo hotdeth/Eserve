@@ -1,19 +1,18 @@
 #!/bin/bash
   # Dhcp install
-  sudo apt update && upgrade -y
-  sudo mkdir -p ~/.Eserve_status
+  sudo apt update -y
   sudo apt install isc-dhcp-server
   sudo systemctl enable isc-dhcp-server
   sudo cp dhcpd.conf /etc/dhcp/dhcpd.conf
   sudo systemctl start -q isc-dhcp-server
   sudo systemctl status isc-dhcp-server 1>./null 2>./null
-
   if [ $? -eq 0 ]
   then
     echo "DHCP running" > ./dhcp_state.txt
   else
     echo "DHCP error"  > ./dhcp_state.txt
   fi
+
   # Ftp install
   sudo apt install vsftpd
   sudo systemctl start vsftpd
@@ -29,10 +28,11 @@
   sudo systemctl restart vsftpd.service
   if [ $? -eq 0 ] 
   then
-    echo "FTP running" > ~/.Eserve_status/ftp_state.txt
+    echo "FTP running" > ./ftp_state.txt
   else
-    echo "FTP exit code $?" > ~/.Eserve_status/ftp_state.txt
+    echo "FTP exit code $?" > ./ftp_state.txt
   fi
+
   #nginx install
   sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
   curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
