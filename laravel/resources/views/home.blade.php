@@ -15,13 +15,17 @@
 <?php 
 $myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
 $dhcp_state = fread($myfile,filesize("dhcp_state.txt"));
-if ($dhcp_state == "Running"){
-    $dhcp_state = "🟢 $dhcp_state";
-}
-else {
-    $dhcp_state = "🔴 $dhcp_state";
-}
+$dhcp_state = "$dhcp_state";
 fclose($myfile);
+//ftp state
+$myfile2 = fopen("ftp_state.txt", "r") or die("Unable to open file!");
+$ftp_state = fread($myfile2,filesize("ftp_state.txt"));
+$ftp_state = "$ftp_state";
+fclose($myfile2);
+
+$dns_state = "running";
+$http_state = "not-running";
+
  ?>
 <!----------------->
 <body>
@@ -34,21 +38,46 @@ fclose($myfile);
             started with your easiest configuration setup.</p>
 
         
+            <img id="img1" src="{{ url('/plugins/1.png') }}" style="width: fit-content;">
+
+<a href="/dhcp" class="rectangle" id="rect1">
+    <div class="dhcp-container">
+        DHCP
+        <div class="blink_me status-text {{ $dhcp_state === 'running' ? 'running' : 'not-running' }}">
+            {{ $dhcp_state }}
+        </div>
+    </div>
+</a>
+
+<a href="/ftp" class="rectangle" id="rect2">
+    <div class="dhcp-container">
+        FTP
+        <div class="blink_me status-text {{ $ftp_state === 'running' ? 'running' : 'not-running' }}">
+            {{ $ftp_state }}
+        </div>
+    </div>
+</a>
+
+<a href="/dns" class="rectangle" id="rect3">
+    <div class="dhcp-container">
+        DNS
+        <div class="blink_me status-text {{ $dns_state === 'running' ? 'running' : 'not-running' }}">
+            {{ $dns_state }}
+        </div>
+    </div>
+</a>
+
+<a href="/http" class="rectangle" id="rect4">
+    <div class="dhcp-container">
+        HTTP
+        <div class="blink_me status-text {{ $http_state === 'running' ? 'running' : 'not-running' }}">
+            {{ $http_state }}
+        </div>
+    </div>
+</a>
 
         
 
-
-        <img id="img1" src="{{ url('/plugins/1.png') }}" style="width: fit-content;">
-    
-    
-            <a href="/dhcp" class="rectangle" id="rect1">DHCP</a>
-            <a href="/ftp" class="rectangle" id="rect2">FTP</a>
-            <a href="/dns" class="rectangle" id="rect3">DNS</a>
-            <a href="/http" class="rectangle" id="rect4">HTTP</a>
-            
-        
-
-        
 
 </body>
 </html>

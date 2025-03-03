@@ -14,7 +14,7 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5% 5% 5% 5%;
+    border-radius: 20px 20px 20px 20px;
     padding: 3px 3%;
     margin: 10px 0px;
     width: 100%;
@@ -138,7 +138,7 @@ form {
 }
 .domin-name input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -160,7 +160,7 @@ form {
 }
 .network input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -181,7 +181,7 @@ form {
 }
 .subnet input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -211,7 +211,7 @@ form {
 }
 .srange input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -230,7 +230,7 @@ form {
 }
 .erange input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -261,7 +261,7 @@ form {
 }
 .def-router input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -282,7 +282,7 @@ form {
 }
 .op-subnetmask input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -319,7 +319,7 @@ form {
 }
 .inp1 input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -335,7 +335,7 @@ form {
 }
 .inp2 input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -361,7 +361,7 @@ form {
 }
 .leasetime input {
     display: block;
-    border: 0;
+    border: 1;
     border-bottom: 2px rgba(128, 128, 128, 0.644) solid;
 }
 
@@ -371,5 +371,9 @@ form {
     font-size: 18px;
 }
 input {
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.tail {
+    color:dimgrey;
 }

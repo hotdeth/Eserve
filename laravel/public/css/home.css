@@ -61,6 +61,7 @@ body{
   }
   
 
+
   .rectangle:hover {
     background-color: #12263d;
     cursor: pointer;
@@ -180,3 +181,54 @@ body{
     }
   
   }
+
+
+  .blink_me {
+    color: red;
+  animation: blinker 1s linear infinite;
+}
+
+
+
+.dhcp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-text {
+  margin-top: 8px;  
+  font-size: 0.9em; 
+}
+
+.rectangle {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.running {
+  color: #0f9962; /* Green color for running state */
+}
+.not-running {
+  color: #ab184b; /* Red color for not running state */
+}
+
+
+
+.ftp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

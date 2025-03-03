@@ -26,7 +26,7 @@
     <span class="arrow"></span>
   </button>
 </a>
-  <form action="">
+  <form action="php.php">
     
     <div class="header-form">
       <h2 class="config">Configuration Settings</h2>
@@ -118,5 +118,6 @@
 
 
   <script src="js/DHCP.js"></script>
+  <h5 class="tail">@EserveTeam v1.0</h5>
 </body>
 </html>
