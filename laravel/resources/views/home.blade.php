@@ -13,8 +13,8 @@
 <!--- for the test state on home page ---->
 
 <?php 
-$myfile = fopen("dhcp_state.txt", "r") or die("Unable to open file!");
-$dhcp_state = fread($myfile,filesize("dhcp_state.txt"));
+$myfile = fopen("php_save/dhcp_state.txt", "r") or die("Unable to open file!");
+$dhcp_state = fread($myfile,filesize("php_save/dhcp_state.txt"));
 $dhcp_state = "$dhcp_state";
 fclose($myfile);
 //ftp state
