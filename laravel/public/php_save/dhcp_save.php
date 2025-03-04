@@ -13,7 +13,7 @@ $dns2 = $_POST['dns2'];
 $lease_time = $_POST['lease_time'];
 
 $dhcpd_conf = "
-option domain-name '$domain_name';
+option domain-name \"$domain_name\";
 option domain-name-servers ns1.$domain_name, ns2.$domain_name;
 default-lease-time $lease_time;
 max-lease-time 7200;
@@ -32,12 +32,12 @@ if (file_put_contents($file_path, $dhcpd_conf)) {
   echo "Configuration saved successfully!";
   $state = shell_exec("sudo systemctl -q restart dhcpd ; echo $?");
   if ($state == '0'){
-    $mystat = fopen("public/dhcp_state.txt" , 'w') or die("Enable");
+    $mystat = fopen("./dhcp_state.txt" , 'w') or die("Enable");
     $dhstat = "running";
     fwrite($mystat , $dhstat);
     fclose($mystat);
   }else{
-    $mystat = fopen("dhcp_state.txt" , 'w') or die("Enable");
+    $mystat = fopen("./dhcp_state.txt" , 'w') or die("Enable");
     $dhstat = "not-running";
     fwrite($mystat , $dhstat);
     fclose($mystat);
