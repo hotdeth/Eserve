@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo systemctl restart -q dhcpd
+if [ $? -eq 0 ]
+then
+    echo "running" >laravel/public/php_save/dhcp_state.txt
+else
+
+    echo "not-running" >laravel/public/php_save/dhcp_state.txt
+fi
