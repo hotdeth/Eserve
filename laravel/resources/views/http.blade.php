@@ -9,11 +9,10 @@
 </head>
 <body>
     <div class="container">
-    <a href="/">
-        <button class="back-button">
-        <span class="arrow"></span>
-        </button>
-    </a>
+        <a href="/" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span class="arrow"></span>
+        </a>
         <div class="settings-card">
             <h2>HTTP Configuration Settings</h2>
             <div class="input-group">
@@ -37,7 +36,8 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="upload-btn"><i class="fas fa-upload"></i> Upload File</button>
+                <label for="folder-upload" class="upload-btn">Upload Folder</label>
+                <input type="file" id="folder-upload" hidden webkitdirectory multiple>
                 <button class="save-btn">Save Changes</button>
             </div>
         </div>

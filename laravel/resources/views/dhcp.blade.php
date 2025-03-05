@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/dhcp.css">
   <style>
     body{
-      background-image: url('plugins/home.jpg');
+      background-image: url('plugins/DHCP.jpg');
       background-size: cover;
       background-attachment: fixed;
     }
