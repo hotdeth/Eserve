@@ -1,5 +1,3 @@
-
-
 <?php
 $domain_name = $_POST['domain_name'];
 $netmask = $_POST['netmask'];

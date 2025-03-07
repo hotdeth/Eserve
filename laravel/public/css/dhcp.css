@@ -238,7 +238,6 @@ form {
     font-size: 18px;
 }
 
-/*div of range start and end*/
 .s-e-range {
     display: flex;
     justify-content: space-between;
@@ -248,7 +247,6 @@ form {
 
 
 
-/* Default Router */
 .def-router {
     display: flex;
     flex-direction: column;
@@ -270,7 +268,6 @@ form {
 }
 
 
-/*Options subnet mask*/
 .op-subnetmask {
     display: flex;
     flex-direction: column;
@@ -298,7 +295,6 @@ form {
 }
 
 
-/*DNS*/
 
 .DNS {
     display: flex;
