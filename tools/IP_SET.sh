@@ -14,7 +14,7 @@ read -p "DNS1" DNS1
 read -p "DNS2" DNS2
 
 
-echo " 
+sudo echo " 
 network:
  version: 2
  renderer: NetworkManager
