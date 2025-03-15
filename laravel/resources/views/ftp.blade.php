@@ -2,11 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ftp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ftp.css">
+    <title>FTP </title>
 </head>
 <body>
-    <h1>I'm ftp</h1>
-   
+    <a href="/">
+        <button class="back-button">
+            <span class="arrow"></span>
+        </button>
+    </a>
+
+    <div class="header">
+        
+        <h2>FTP Configuration Settings</h2>
+
+    </div>
+
+<form action="">
+
+    <div class="form-form">
+        <div class="form-grob">
+            <label>Anonymous</label> <br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob">
+            <label>Local_enable</label> <br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob">
+            <label>write_enable</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob"> 
+            <label>Local_umask</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">022</option>
+                <option value="op2">077</option>
+            </select>
+        </div>
+
+        <div class="form-grob"> 
+            <label>Dirmessage_enable</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob">
+            <label>xferlog_enable</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob">
+            <label>Connect_from_port_20</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob"> 
+            <label>xferlog_std_format</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        <div class="form-grob"> 
+            <label>Listen_IPv6</label><br>
+            <select>
+                <option value="default">Select an option</option>
+                <option value="op1">Yes</option>
+                <option value="op2">No</option>
+            </select>
+        </div>
+
+        
+            <div class="form-grob"> 
+                <label>Userlist_enable</label><br>
+                <select>
+                    <option value="default">Select an option</option>
+                    <option value="op1">Yes</option>
+                    <option value="op2">No</option>
+                </select>
+            </div>
+
+            <div class="form-grob"> 
+                <label class="pam_l">pam_service_name:</label><br>
+                <input type="text" class="pam">
+            </div>
+        
+        
+    </div>
+    
+    <div id="right">
+        <div class="right">
+            <label>Add User (option)</label> <br>
+            <input type="email">
+        </div>
+
+        <div class="right">
+            <label>Password</label><br>
+            <input type="password">
+        </div>
+        <div>
+            <button class="save">Save Changes</button>
+        </div>
+    </div>
+</form>
+
 </body>
 </html>
