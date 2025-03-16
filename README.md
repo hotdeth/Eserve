@@ -58,16 +58,10 @@ The project is built using the following technologies:
 ## Project Contributors
 The project was developed by a dedicated team of programmers and designers:
 - **Ridha Read**
-- **Ali Haider**
 - **Rawan Wajdi**
 - **Fatima Mohsin**
-- **Ridha Karem**
-- **Ali Majid**
 - **Ashtar Faris**
-- **Hussein Jabbar**
-- **Taher Ahmed**
 - **Mohammed Baqer**
-- **Mohammed Basem**
 
 ## Installation
 To install and run Eserve, follow these steps:
@@ -87,7 +81,9 @@ To install and run Eserve, follow these steps:
    http://localhost:8000
    ```
    to access the **Eserve web interface**.
-
+```
+This project own by hotdeth
+```
 ## Contribution
 Contributions to this project are welcome. To contribute:
 1. Fork the repository.
