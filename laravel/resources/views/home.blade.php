@@ -18,7 +18,7 @@ $dhcp_state = fread($myfile,filesize("php_save/dhcp_state.txt"));
 $dhcp_state = "$dhcp_state";
 fclose($myfile);
 //ftp state
-$myfile2 = fopen("ftp_state.txt", "r") or die("Unable to open file!");
+$myfile2 = fopen("php_save/ftp_state.txt", "r") or die("Unable to open file!");
 $ftp_state = fread($myfile2,filesize("ftp_state.txt"));
 $ftp_state = "$ftp_state";
 fclose($myfile2);
