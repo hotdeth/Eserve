@@ -42,9 +42,10 @@ $dns_state = "running";
         
         <h2 id="Eserve">Eserve</h2>
 
-        <p id="p1">your best open source destination,
-            choose your service and get
-            started with your easiest configuration setup.</p>
+        <p id="p1">The open-source project to manage your
+            servers <br>
+            choice your server and get started 
+        </p>
 
         
             <img id="img1" src="{{ url('/plugins/1.png') }}" style="width: fit-content;">
@@ -70,8 +71,9 @@ $dns_state = "running";
 <a href="/dns" class="rectangle" id="rect3">
     <div class="dhcp-container">
         DNS
-        <div class="blink_me status-text {{ $dns_state === 'running' ? 'running' : 'not-running' }}">
-            {{ $dns_state }}
+        <div class=" status-text comming-soon">
+            comming soon
+            
         </div>
     </div>
 </a>
