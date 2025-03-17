@@ -1,6 +1,6 @@
 #!/bin/bash
-
-sudo systemctl reload -q isc-dhcp-serve
+sudo systemctl restart isc-dhcp-server
+sudo systemctl status  isc-dhcp-server 1>./null 2>./null
 if [ $? -eq 0 ]
 then
     echo "running" >./laravel/public/php_save/dhcp_state.txt

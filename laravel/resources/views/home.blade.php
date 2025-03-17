@@ -23,8 +23,15 @@ $ftp_state = fread($myfile2,filesize("ftp_state.txt"));
 $ftp_state = "$ftp_state";
 fclose($myfile2);
 
+$myfile2 = fopen("php_save/nginx_state.txt", "r") or die("Unable to open file!");
+$http_state = fread($myfile2,filesize("nginx_state.txt"));
+$http_state = "$nginx_state";
+fclose($myfile2);
+
+
 $dns_state = "running";
-$http_state = "not-running";
+
+
 
  ?>
 <!----------------->
