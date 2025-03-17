@@ -19,14 +19,14 @@ $dhcp_state = "$dhcp_state";
 fclose($myfile);
 //ftp state
 $myfile2 = fopen("php_save/ftp_state.txt", "r") or die("Unable to open file!");
-$ftp_state = fread($myfile2,filesize("ftp_state.txt"));
+$ftp_state = fread($myfile2,filesize("php_save/ftp_state.txt"));
 $ftp_state = "$ftp_state";
 fclose($myfile2);
 
-$myfile2 = fopen("php_save/nginx_state.txt", "r") or die("Unable to open file!");
-$http_state = fread($myfile2,filesize("nginx_state.txt"));
-$http_state = "$nginx_state";
-fclose($myfile2);
+$myfile3 = fopen("php_save/nginx_state.txt", "r") or die("Unable to open file!");
+$http_state = fread($myfile3,filesize("php_save/nginx_state.txt"));
+$http_state = "$http_state";
+fclose($myfile3);
 
 
 $dns_state = "running";
@@ -50,7 +50,7 @@ $dns_state = "running";
 <a href="/dhcp" class="rectangle" id="rect1">
     <div class="dhcp-container">
         DHCP
-        <div class="blink_me status-text {{ $dhcp_state === 'running' ? 'running' : 'not-running' }}">
+        <div class="blink_me status-text {{ $dhcp_state === 'running ' ? 'running' : 'not-running ' }}">
             {{ $dhcp_state }}
         </div>
     </div>
@@ -59,7 +59,7 @@ $dns_state = "running";
 <a href="/ftp" class="rectangle" id="rect2">
     <div class="dhcp-container">
         FTP
-        <div class="blink_me status-text {{ $ftp_state === 'running' ? 'running' : 'not-running' }}">
+        <div class="blink_me status-text {{ $ftp_state === 'running ' ? 'running' : 'not-running' }}">
             {{ $ftp_state }}
         </div>
     </div>
@@ -68,7 +68,7 @@ $dns_state = "running";
 <a href="/dns" class="rectangle" id="rect3">
     <div class="dhcp-container">
         DNS
-        <div class="blink_me status-text {{ $dns_state === 'running' ? 'running' : 'not-running' }}">
+        <div class="blink_me status-text {{ $dns_state === 'running ' ? 'running' : 'not-running' }}">
             {{ $dns_state }}
         </div>
     </div>
@@ -77,7 +77,7 @@ $dns_state = "running";
 <a href="/http" class="rectangle" id="rect4">
     <div class="dhcp-container">
         HTTP
-        <div class="blink_me status-text {{ $http_state === 'running' ? 'running' : 'not-running' }}">
+        <div class="blink_me status-text {{ $http_state === 'running ' ? 'running' : 'not-running' }}">
             {{ $http_state }}
         </div>
     </div>
