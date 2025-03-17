@@ -8,9 +8,9 @@
   sudo systemctl status isc-dhcp-server 1>./null 2>./null
   if [ $? -eq 0 ]
   then
-    echo "DHCP running" > ./dhcp_state.txt
+    echo "Running" > ./laravel/public/php_save/dhcp_state.txt
   else
-    echo "DHCP error"  > ./dhcp_state.txt
+    echo "not-running"  > ./laravel/public/php_save/dhcp_state.txt 
   fi
 
   # Ftp install
@@ -28,9 +28,9 @@
   sudo systemctl restart vsftpd.service
   if [ $? -eq 0 ] 
   then
-    echo "FTP running" > ./ftp_state.txt
+    echo "Running" > ./laravel/public/php_save/ftp_state.txt
   else
-    echo "FTP exit code $?" > ./ftp_state.txt
+    echo "not-running" > ./laravel/public/php_save/ftp_state.txt 
   fi
 
   #nginx install
@@ -41,6 +41,7 @@
   echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
     | sudo tee /etc/apt/preferences.d/99nginx
   sudo apt install nginx -y
+  sudo apt-get install php-sqlite3
   sudo systemctl enable -q nginx
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
@@ -51,9 +52,9 @@
   sudo systemctl restart -q nginx 
   if [ $? -eq 0 ]
   then
-    echo "nginx running" > ./nginx_state.txt
+    echo "running" > ./laravel/public/php_save/nginx_state.txt
   else
-    echo "nginx error!" > ./nginx_state.txt
+    echo "not-running" > ./laravel/public/php_save/nginx_state.txt
   fi
 
 
