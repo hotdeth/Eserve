@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $configContent .= "$key=$value\n";
     }
 
-    $file_path = '/etc/vsftpd/vsftpd.conf';
+    $file_path = '/etc/vsftpd.conf';
 
         if (file_put_contents($file_path, $configContent)) {
             echo "config save success";

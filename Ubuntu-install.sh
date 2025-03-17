@@ -42,6 +42,8 @@
     | sudo tee /etc/apt/preferences.d/99nginx
   sudo apt install nginx -y
   sudo apt-get install php-sqlite3
+  sudo apt-get install php-dom
+  sudo apt-get install php8.2-xml
   sudo systemctl enable -q nginx
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu
