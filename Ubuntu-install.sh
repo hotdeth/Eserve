@@ -56,6 +56,7 @@
   else
     echo "not-running" > ./laravel/public/php_save/nginx_state.txt
   fi
+  ./start
 
 
 
