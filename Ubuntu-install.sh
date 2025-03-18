@@ -44,6 +44,8 @@
   sudo apt-get install php-sqlite3
   sudo apt-get install php-dom
   sudo apt-get install php8.2-xml
+  sudo rm /etc/nginx/sites-available/default
+  sudo rm /etc/nginx/sites-enabled/default
   sudo systemctl enable -q nginx
   sudo systemctl start -q nginx 
   sudo mkdir /var/www/for_ubuntu

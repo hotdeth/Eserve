@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo systemctl deamon-reload
 sudo systemctl restart isc-dhcp-server
 sudo systemctl status  isc-dhcp-server 1>./null 2>./null
 if [ $? -eq 0 ]
