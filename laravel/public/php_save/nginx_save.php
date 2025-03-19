@@ -28,8 +28,6 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
       echo "Configuration saved successfully!\n";
       $hey = shell_exec("ln -s /etc/nginx/sites-available/$serverName /etc/nginx/sites-enabled/");
       $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
-      echo $reload;
-   
       if ($reload == '0'){
         $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
         $dhstat = "running";

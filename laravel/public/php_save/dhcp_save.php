@@ -28,7 +28,8 @@ $file_path = '/etc/dhcp/dhcpd.conf';
 
 if (file_put_contents($file_path, $dhcpd_conf)) {
   echo "Configuration saved successfully!";
-  $state = shell_exec("sudo systemctl -q restart isc-dhcp-server ; echo $?");
+  $reload = shell_exec("sudo systemctl restart isc-dhcp-server");
+  $state = shell_exec("sudo systemctl is-active -q isc-dhcp-server && echo $?");
   if ($state == '0'){
     $mystat = fopen("./dhcp_state.txt" , 'w') or die("Enable");
     $dhstat = "running";
