@@ -26,7 +26,7 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
 
     if (file_put_contents($nginx_path, $nginxConfig)) {
       echo "Configuration saved successfully!\n";
-      $hey = shell_exec("ln -s /etc/nginx/sites-available/$serverName /etc/nginx/sites-enabled/");
+      $hey = shell_exec("ln -sfn /etc/nginx/sites-available/$serverName /etc/nginx/sites-enabled/");
       $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
       if ($reload == '0'){
         $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
@@ -41,7 +41,7 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
     }
 }
 
-   
+
 
     if (isset($_FILES['folder-upload'])) {
         $uploadDir = './'.$serverName.'/';
@@ -60,10 +60,11 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
                $stat_var = 1;
             } else {
                 echo "Error uploading files\n";
+                $stat_var = 0;
             }
-    
+
         }
-        
+
     if($stat_var == 1){
         $mvF = shell_exec("cp -r ./$serverName /var/www/");
         $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
@@ -78,7 +79,7 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
             fwrite($mystat , $dhstat);
             fclose($mystat);
         }
-    
+
     }
     }
 } else {

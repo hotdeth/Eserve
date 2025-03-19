@@ -41,9 +41,8 @@
   echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
     | sudo tee /etc/apt/preferences.d/99nginx
   sudo apt install nginx -y
-  sudo apt-get install php-sqlite3
-  sudo apt-get install php-dom
-  sudo apt-get install php8.2-xml
+  sudo apt-get install php-sqlite3 -y
+  sudo apt-get install php-dom -y
   sudo rm /etc/nginx/sites-available/default
   sudo rm /etc/nginx/sites-enabled/default
   sudo systemctl enable -q nginx
