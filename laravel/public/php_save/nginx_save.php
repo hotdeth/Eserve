@@ -21,13 +21,27 @@ server_name $serverName;
 ";
 
 
-$nginx_path = './'.$serverName.'.conf';
+$nginx_path = '/etc/nginx/sites-available/'.$serverName.'.conf';
 
 
     if (file_put_contents($nginx_path, $nginxConfig)) {
       echo "Configuration saved successfully!\n";
-      
+      $hey = shell_exec("ln -s /etc/nginx/sites-available/$serverName.conf /etc/nginx/sites-enabled/");
+      $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
+      echo $reload;
+   
+      if ($reload == '0'){
+        $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
+        $dhstat = "running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
+    }else{
+        $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
+        $dhstat = "not-running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
     }
+}
 
    
 
@@ -45,11 +59,29 @@ $nginx_path = './'.$serverName.'.conf';
 
             if (move_uploaded_file($fileTmpPath, $filePath)) {
                 echo "Files uploaded successfully\n";
+               $stat_var = 1;
             } else {
                 echo "Error uploading files\n";
             }
+    
         }
         
+    if($stat_var == 1){
+        $mvF = shell_exec("cp -r ./$serverName /var/www/");
+        $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
+        if ($reload == '0'){
+            $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
+            $dhstat = "running";
+            fwrite($mystat , $dhstat);
+            fclose($mystat);
+        }else{
+            $mystat = fopen("./nginx_state.txt" , 'w') or die("Enable");
+            $dhstat = "not-running";
+            fwrite($mystat , $dhstat);
+            fclose($mystat);
+        }
+    
+    }
     }
 } else {
     echo "Invalid request method!";
