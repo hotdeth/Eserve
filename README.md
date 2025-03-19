@@ -1,8 +1,8 @@
 
 
 <p align="center">
-  <img src="fatima/logorr.png#gh-dark-mode-only" alt="Eserve">
-   <img src="fatima/logorr.png#gh-light-mode-only" alt="Eserve">
+  <img src="resources/logorr.png#gh-dark-mode-only" alt="Eserve">
+   <img src="resources/logorr.png#gh-light-mode-only" alt="Eserve">
 </p>
 
 # Eserve Project – Simplifying Network Server Management
