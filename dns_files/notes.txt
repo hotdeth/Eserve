@@ -1,3 +1,0 @@
-the file  rndc.key is not in this directory is append when you install the bind on your machine 
-
-
