@@ -21,12 +21,12 @@ server_name $serverName;
 ";
 
 
-$nginx_path = '/etc/nginx/sites-available/'.$serverName.'.conf';
+$nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
 
 
     if (file_put_contents($nginx_path, $nginxConfig)) {
       echo "Configuration saved successfully!\n";
-      $hey = shell_exec("ln -s /etc/nginx/sites-available/$serverName.conf /etc/nginx/sites-enabled/");
+      $hey = shell_exec("ln -s /etc/nginx/sites-available/$serverName /etc/nginx/sites-enabled/");
       $reload = shell_exec("sudo systemctl reload -q  nginx.service   &&  echo $?");
       echo $reload;
    

@@ -9,6 +9,25 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="sidebar">
+            <h3>Available Servers</h3>
+            <ul>
+                <?php
+                $files = [];
+                $directory = '/etc/nginx/sites-available/';
+                if (is_dir($directory)) {
+                    $files = array_diff(scandir($directory), array('..', '.'));
+                }
+
+                foreach ($files as $file) {
+                    echo "<li>{$file}</li>";
+                }
+                ?>
+            </ul>
+        </div>
+
+    
         <a href="/" class="back-btn">
             <i class="fas fa-arrow-left"></i>
             <span class="arrow"></span>
