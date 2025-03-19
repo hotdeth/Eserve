@@ -5,7 +5,7 @@
   sudo systemctl enable isc-dhcp-server
   sudo cp dhcpd.conf /etc/dhcp/dhcpd.conf
   sudo systemctl start -q isc-dhcp-server
-  sudo systemctl status isc-dhcp-server 1>./null 2>./null
+  sudo systemctl status isc-dhcp-server 1>./null 2>./null && shred ./null
   if [ $? -eq 0 ]
   then
     echo "Running" > ./laravel/public/php_save/dhcp_state.txt
