@@ -1,6 +1,7 @@
 <!DOCTYPE html><html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
     <title>Eserve</title>
     <meta name="Discription" content="A service website serve servers">
     <meta name="author" content="Eredin">
@@ -13,6 +14,55 @@
 <!--- for the test state on home page ---->
 
 <?php 
+//rewrite the status 
+
+//check the dhcp
+$state = shell_exec("sudo systemctl is-active -q isc-dhcp-server && echo $?");
+if ($state == '0'){
+  $mystat = fopen("php_save/dhcp_state.txt" , 'w') or die("Enable");
+  $dhstat = "running";
+  fwrite($mystat , $dhstat);
+  fclose($mystat);
+}else{
+  $mystat = fopen("php_save/dhcp_state.txt" , 'w') or die("Enable");
+  $dhstat = "not-running";
+  fwrite($mystat , $dhstat);
+  fclose($mystat);
+}
+
+//check the nginx 
+
+$reload = shell_exec("sudo systemctl is-active -q  nginx.service   &&  echo $?");
+      if ($reload == '0'){
+        $mystat = fopen("php_save/nginx_state.txt" , 'w') or die("Enable");
+        $dhstat = "running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
+    }else{
+        $mystat = fopen("php_save/nginx_state.txt" , 'w') or die("Enable");
+        $dhstat = "not-running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
+    }
+
+//check vsftp
+$reload = shell_exec("sudo systemctl is-active -q  vsftpd.service   &&  echo $?");
+      if ($reload == '0'){
+        $mystat = fopen("php_save/ftp_state.txt" , 'w') or die("Enable");
+        $dhstat = "running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
+    }else{
+        $mystat = fopen("php_save/ftp_state.txt" , 'w') or die("Enable");
+        $dhstat = "not-running";
+        fwrite($mystat , $dhstat);
+        fclose($mystat);
+    }
+
+
+
+
+
 $myfile = fopen("php_save/dhcp_state.txt", "r") or die("Unable to open file!");
 $dhcp_state = fread($myfile,filesize("php_save/dhcp_state.txt"));
 $dhcp_state = "$dhcp_state";
@@ -31,7 +81,16 @@ fclose($myfile3);
 
 
 
-$dns_state = "running";
+//this is to show the uptime of the servers just use the variable 
+
+$nginx_uptime = shell_exec('systemctl status nginx | grep -Po ".*; \K(.*)(?= ago)"');
+$dhcp_uptime = shell_exec('systemctl status isc-dhcp-server | grep -Po ".*; \K(.*)(?= ago)"');
+$ftp_uptime = shell_exec('systemctl status vsftpd.service | grep -Po ".*; \K(.*)(?= ago)"');
+
+
+
+
+
 
 
 
@@ -56,6 +115,8 @@ $dns_state = "running";
         <div class="blink_me status-text {{ $dhcp_state === 'running' ? 'running' : 'not-running ' }}">
             {{ $dhcp_state }}
         </div>
+        <div class='uptime'>
+        {{ $dhcp_uptime }}</div>
     </div>
 </a>
 
@@ -65,6 +126,8 @@ $dns_state = "running";
         <div class="blink_me status-text {{ $ftp_state === 'running' ? 'running' : 'not-running' }}">
             {{ $ftp_state }}
         </div>
+        <div class='uptime'>
+        {{ $ftp_uptime }}</div>
     </div>
 </a>
 
@@ -84,6 +147,8 @@ $dns_state = "running";
         <div class="blink_me status-text {{ $nginx_state === 'running' ? 'running' : 'not-running' }}">
             {{ $nginx_state }}
         </div>
+        <div class='uptime'>
+        {{ $nginx_uptime }}</div>
     </div>
 </a>
 

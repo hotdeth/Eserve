@@ -233,3 +233,11 @@ body{
   align-items: center;
   justify-content: center;
 }
+
+
+
+
+.uptime {
+  color:rgb(169, 175, 170);
+  font-size:medium;
+}

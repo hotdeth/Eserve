@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo systemctl daemon-reload
-sudo systemctl restart isc-dhcp-server
 sudo systemctl status  isc-dhcp-server 1>./null 2>./null
 if [ $? -eq 0 ]
 then
@@ -10,7 +9,7 @@ else
     echo -ne "not-running" >  ./laravel/public/php_save/dhcp_state.txt
 fi
 
-sudo systemctl restart -q nginx 
+sudo systemctl reload -q nginx 
 if [ $? -eq 0 ]
 then
     echo -ne "running" > ./laravel/public/php_save/nginx_state.txt
@@ -19,7 +18,7 @@ else
     echo -ne "not-running" > ./laravel/public/php_save/nginx_state.txt
 fi
 
-sudo systemctl restart -q vsftpd
+sudo systemctl is-active -q vsftpd
 if [ $? -eq 0 ]
 then
     echo -ne "running" > ./laravel/public/php_save/ftp_state.txt
