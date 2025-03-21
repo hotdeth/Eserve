@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo systemctl daemon-reload
 sudo systemctl status  isc-dhcp-server 1>./null 2>./null
+
 if [ $? -eq 0 ]
 then
     echo -ne "running" > ./laravel/public/php_save/dhcp_state.txt 
@@ -25,5 +26,5 @@ then
 else
     echo -ne "not-running" > ./laravel/public/php_save/ftp_state.txt
 fi
-
+shred ./null
 sudo php ./laravel/artisan serve

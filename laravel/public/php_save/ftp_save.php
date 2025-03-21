@@ -43,5 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   
     }
+    echo '<h1><a href="/">Home</a></h1>';
 
 ?>

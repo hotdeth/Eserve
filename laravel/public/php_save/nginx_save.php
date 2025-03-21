@@ -85,4 +85,6 @@ $nginx_path = '/etc/nginx/sites-available/'.$serverName.'';
 } else {
     echo "Invalid request method!";
 }
+
+echo '<h1><a href="/">Home</a></h1>';
 ?>

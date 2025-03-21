@@ -46,5 +46,6 @@ if (file_put_contents($file_path, $dhcpd_conf)) {
   echo "Error saving configuration.";
 }
 
+echo '<h1><a href="/">Home</a></h1>';
 
 ?>
