@@ -31,6 +31,11 @@
   </style>
 </head>
 <body>
+    <a href="/">
+        <button class="back-button">
+            <span class="arrow"></span>
+        </button>
+    </a>
     <?php
     if (isset($_GET['message'])) {
         $type = $_GET['type'] ?? 'info';
@@ -38,11 +43,7 @@
     }
     ?>
 
-    <a href="/">
-        <button class="back-button">
-            <span class="arrow">←</span> Back
-        </button>
-    </a>
+    
 
     <div class="container">
         <header class="header">

@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/http.css">
 </head>
 <body>
+        <a href="/">
+            <button class="back-button">
+                <span class="arrow"></span>
+            </button>
+        </a>
     <div class="container">
 
         <div class="sidebar">
@@ -28,10 +33,8 @@
         </div>
 
     
-        <a href="/" class="back-btn">
-            <i class="fas fa-arrow-left"></i>
-            <span class="arrow"></span>
-        </a>
+        
+
         <form action="php_save/nginx_save.php" method="POST" enctype="multipart/form-data">
             <div class="settings-card">
                 <h2>HTTP Configuration Settings</h2>
