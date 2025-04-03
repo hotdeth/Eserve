@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTTP Configuration</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/http.css">
 </head>
+
+<?php
+$number_of_request = shell_exec("cat /var/log/nginx/access.log | wc -l")
+?>
 <body>
         <a href="/">
             <button class="back-button">
@@ -36,6 +41,10 @@
         
 
         <form action="php_save/nginx_save.php" method="POST" enctype="multipart/form-data">
+        <p class="request">
+    Total reqeusts:
+        {{ $number_of_request }}
+   </p>
             <div class="settings-card">
                 <h2>HTTP Configuration Settings</h2>
                 <div class="input-group">
